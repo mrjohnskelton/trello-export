@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 The app uses the [`norberteder/trello`](https://github.com/norberteder/trello) API to talk to Trello and, with your own API Key, access token and member ID, extract Trello information for Boards, Lists, Cards and card content.
 
-At the time of first commit, an extension was required to the [`norberteder/trello`](https://github.com/norberteder/trello) API to do some of the extracts.  These functions follow the pattern of all other functions in `main.js`, to add:
+At the time of first commit, I'd raised a pull request on the [`norberteder/trello`](https://github.com/norberteder/trello) API to do some of the extracts.  These functions follow the pattern of all other functions in `main.js`, to add:
 
 ```javascript
   Trello.prototype.getAttachmentsOnCard = function (cardId, callback) {
@@ -24,12 +24,12 @@ At the time of first commit, an extension was required to the [`norberteder/trel
   };
 ```
 
-If these changes still aren't on the main branch, then instead of doing a `yarn add trello`, clone [`norberteder/trello`](https://github.com/norberteder/trello) to the same parent folder that you've cloned this code to and, use `npm link` (see below) to create a symbolic link to the Trello code.
+If the pull request is outstanding or rejected, then instead of doing a `yarn add trello`, clone [`norberteder/trello`](https://github.com/norberteder/trello) to the same parent folder that you've cloned this code to and, use `npm link` (see below) to create a symbolic link to the Trello code.
 
 Link to the amended Trello project you just cloned main.js using [npm link](https://www.deadcoderising.com/how-to-smoothly-develop-node-modules-locally-using-npm-link/)
 
 ```shell
-  cd trello-page-extract
+  cd trello-export
   npm link ../trello
 ```
 
@@ -43,7 +43,7 @@ Swing on over to [Trello Developers](https://developers.trello.com/docs/api-intr
 
 ### Setting up API Config
 
-You can either simply run the web app and key in the Trello access information, or (to save rekeying), in the `trello-page-extract/src` folder create a file called `.env.local.json` (this is in `.gitignore`) with the following content:
+You can either simply run the web app and key in the Trello access information, or (to save rekeying), in the `trello-export/src` folder create a file called `.env.local.json` (this is in `.gitignore`) with the following content:
 
 ```json
   {
